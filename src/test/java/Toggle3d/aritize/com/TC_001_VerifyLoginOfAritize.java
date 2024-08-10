@@ -66,7 +66,7 @@ public class TC_001_VerifyLoginOfAritize {
 	public void closures() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 //		driver.close();
-//		test
+//		test1
 	}
 
 }
