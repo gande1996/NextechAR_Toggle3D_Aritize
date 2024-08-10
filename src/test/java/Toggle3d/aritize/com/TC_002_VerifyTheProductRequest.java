@@ -67,6 +67,6 @@ public class TC_002_VerifyTheProductRequest {
 	@AfterMethod
 	public void closures() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//		driver.quit();
+//		driver.quit();Test2
 	}
 }
