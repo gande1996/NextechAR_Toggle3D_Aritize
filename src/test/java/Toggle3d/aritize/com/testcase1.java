@@ -40,26 +40,29 @@ public class testcase1 {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
+
 	@Test
 	public void testcase() throws InterruptedException {
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-//		driver.navigate().refresh();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		WebElement h3title = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#app > div > div > div.jss9 > div > div > div.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2 > div:nth-child(1) > h3")));
-		String actualtitle= h3title.getText();
+		WebElement h3title = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+				"#app > div > div > div.jss9 > div > div > div.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2 > div:nth-child(1) > h3")));
+		String actualtitle = h3title.getText();
 		String expectedtitle = "ARitize 3D Dashboard";
 		System.out.println("Actual H3 Title: " + actualtitle);
-        assert actualtitle.equals(expectedtitle) : "Title does not match!";
-//        driver.navigate().refresh();
-        WebElement toolsmenu=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/header/div/div/div[37]/div/span"));
-        toolsmenu.click();
-        WebElement complexityCheckersubmenu=driver.findElement(By.xpath("/html/body/div[2]/div[3]/ul/a[2]/li/div/span"));
-        complexityCheckersubmenu.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.findElement(By.xpath("//input[@type='file'][@name='primary_image']")).sendKeys("C:\\Users\\Toggle3D\\Desktop\\81ejz3uOYRL._AC_UL320_.jpg");
-        
-        
+		assert actualtitle.equals(expectedtitle) : "Title does not match!";
+		WebElement toolsmenu = driver
+				.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/header/div/div/div[37]/div/span"));
+		toolsmenu.click();
+		WebElement complexityCheckersubmenu = driver
+				.findElement(By.xpath("/html/body/div[2]/div[3]/ul/a[2]/li/div/span"));
+		complexityCheckersubmenu.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(By.xpath("//input[@type='file'][@name='primary_image']"))
+				.sendKeys("C:\\Users\\Toggle3D\\Desktop\\81ejz3uOYRL._AC_UL320_.jpg");
+
+		
 	}
+
 	@AfterMethod
 	public void close() {
 //		driver.close();
