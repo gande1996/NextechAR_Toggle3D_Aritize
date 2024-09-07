@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Toggle3d.aritize.com.TC_002_VerifyTheProductRequest">
+      <class name="Toggle3d.aritize.com.testcase1">
         <methods>
-          <include name="verify_with_valid_login_details"/>
-          <include name="LaunchBroswer"/>
-          <include name="closures"/>
+          <include name="launchbroswer"/>
+          <include name="close"/>
+          <include name="testcase"/>
         </methods>
-      </class> <!-- Toggle3d.aritize.com.TC_002_VerifyTheProductRequest -->
+      </class> <!-- Toggle3d.aritize.com.testcase1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

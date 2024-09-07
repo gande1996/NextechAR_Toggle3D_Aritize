@@ -47,14 +47,12 @@ public class TC_002_VerifyTheProductRequest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 		driver.findElement(By.xpath("(//span[normalize-space()='Product Request'])[1]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//		String text = driver.findElement(By.cssSelector("h2")).getText();
-//        assertEquals(text, "Product Request");
 		WebElement productTitle = driver.findElement(By.id("title"));
 		productTitle.sendKeys("pumaShoes");
 		WebElement productURL = driver.findElement(By.id("url"));
 		productURL.sendKeys("https://in.puma.com/in/en/pd/tour-mens-sneakers/386918?swatch=01");
 		WebElement sku = driver.findElement(By.id("sku"));
-		sku.sendKeys("puma001");
+		sku.sendKeys("puma002");
 		WebElement productcategory = driver.findElement(By.id("client_category"));
 		productcategory.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

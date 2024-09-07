@@ -3,6 +3,7 @@ package Toggle3d.aritize.com;
 import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -43,7 +44,7 @@ public class testcase1 {
 
 	@Test
 	public void testcase() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 		WebElement h3title = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
 				"#app > div > div > div.jss9 > div > div > div.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2 > div:nth-child(1) > h3")));
 		String actualtitle = h3title.getText();
@@ -56,10 +57,24 @@ public class testcase1 {
 		WebElement complexityCheckersubmenu = driver
 				.findElement(By.xpath("/html/body/div[2]/div[3]/ul/a[2]/li/div/span"));
 		complexityCheckersubmenu.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.findElement(By.xpath("//input[@type='file'][@name='primary_image']"))
-				.sendKeys("C:\\Users\\Toggle3D\\Desktop\\81ejz3uOYRL._AC_UL320_.jpg");
-
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+		WebElement category = driver.findElement(By.id("category"));
+		category.sendKeys("Other");
+		List<WebElement> dropdownoptions= driver.findElements(By.xpath("//ul[contains(@class, 'MuiMenuItem-root')]"));
+		for(WebElement options: dropdownoptions) {
+			if(options.getText().equals("Other")) {
+				options.click();
+				break;
+			}
+		}
+		WebElement primaryImageLabel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[contains(text(),'Primary Image')]")));
+	    primaryImageLabel.click();
+	    WebElement fileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file'][@name='primary_image']")));
+	    fileInput.sendKeys("C:\\Users\\Toggle3D\\Desktop\\81ejz3uOYRL._AC_UL320_.jpg");
+		
+//		driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div/div/form/div/div[1]/div/div/span/label")).click();
+//		driver.findElement(By.xpath("//input[@type='file'][@name='primary_image']"))
+//				.sendKeys("C:\\Users\\Toggle3D\\Desktop\\81ejz3uOYRL._AC_UL320_.jpg");
 		
 	}
 
