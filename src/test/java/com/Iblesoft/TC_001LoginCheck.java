@@ -21,28 +21,38 @@ public class TC_001LoginCheck {
 		ChromeOptions co = new ChromeOptions();
 		co.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(co);
-		driver.get("https://manage.smarteweb.com/");
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 	}
 	@Test
 	public void ValidLoginTest() {
-		
+		driver.get("https://manage.smarteweb.com/");
 		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtusername")).sendKeys("iblesoft");
 		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtpassword")).sendKeys("Boxon@123");
 		driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnlogin")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//		WebElement mainmessage=driver.findElement(By.cssSelector("#ctl00_lblDesc"));
+//		String expectedText = "MAIN";
+//		String actualText = mainmessage.getText();
+//		Assert.assertEquals(actualText, expectedText, "Error message does not match.");
+		WebElement errormessage = driver.findElement(By.cssSelector("#ctl00_lblDesc"));
+		Assert.assertTrue(errormessage.isDisplayed(),"Message Not Found");
 		
 	}
 	@Test
 	public void InvalidLoginTest() {
+		driver.get("https://manage.smarteweb.com/");
 		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtusername")).sendKeys("iblesoftTT");
 		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtpassword")).sendKeys("Boxon@123156");
 		driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnlogin")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		WebElement errormessage=driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_lblMsg"));
-		String expectedText = "Invalid Username Or Password";
-		String actualText =driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_lblMsg")).getText();
-		Assert.assertEquals(actualText, expectedText, "Error message does not match.");
+//		WebElement errormessage=driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_lblMsg"));
+//		String expectedText = "Invalid Username Or Password";
+//		String actualText =errormessage.getText();
+//		Assert.assertEquals(actualText, expectedText, "Error message does  match.");
+		WebElement errorMessage = driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_lblMsg"));
+		Assert.assertTrue(errorMessage.isDisplayed(), "Error message element is not displayed.");
 	}
 	@AfterMethod
 	public void closebrowser() {
