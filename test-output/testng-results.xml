@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-11T19:27:49 IST" name="Default suite" finished-at="2024-09-11T19:28:00 IST" duration-ms="10795">
+  <suite started-at="2024-09-12T00:42:46 IST" name="Default suite" finished-at="2024-09-12T00:43:06 IST" duration-ms="20048">
     <groups>
     </groups>
-    <test started-at="2024-09-11T19:27:49 IST" name="Default test" finished-at="2024-09-11T19:28:00 IST" duration-ms="10795">
-      <class name="com.Iblesoft.TC_001LoginCheck">
-        <test-method is-config="true" signature="launchbroswer()[pri:0, instance:com.Iblesoft.TC_001LoginCheck@b9b00e0]" started-at="2024-09-11T19:27:49 IST" name="launchbroswer" finished-at="2024-09-11T19:27:51 IST" duration-ms="1275" status="PASS">
+    <test started-at="2024-09-12T00:42:46 IST" name="Default test" finished-at="2024-09-12T00:43:06 IST" duration-ms="20048">
+      <class name="Toggle3d.aritize.com.TC_Internal_Selfserve_Login">
+        <test-method is-config="true" signature="Launchbroswer()[pri:0, instance:Toggle3d.aritize.com.TC_Internal_Selfserve_Login@13fd2ccd]" started-at="2024-09-12T00:42:46 IST" name="Launchbroswer" finished-at="2024-09-12T00:42:48 IST" duration-ms="1380" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchbroswer -->
-        <test-method signature="InvalidLoginTest()[pri:0, instance:com.Iblesoft.TC_001LoginCheck@b9b00e0]" started-at="2024-09-11T19:27:51 IST" name="InvalidLoginTest" finished-at="2024-09-11T19:27:54 IST" duration-ms="3362" status="PASS">
+        </test-method> <!-- Launchbroswer -->
+        <test-method signature="Checkhomepage()[pri:0, instance:Toggle3d.aritize.com.TC_Internal_Selfserve_Login@13fd2ccd]" started-at="2024-09-12T00:42:48 IST" name="Checkhomepage" finished-at="2024-09-12T00:43:06 IST" duration-ms="18641" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InvalidLoginTest -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.Iblesoft.TC_001LoginCheck@b9b00e0]" started-at="2024-09-11T19:27:54 IST" name="closebrowser" finished-at="2024-09-11T19:27:54 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- Checkhomepage -->
+        <test-method is-config="true" signature="browserclosure()[pri:0, instance:Toggle3d.aritize.com.TC_Internal_Selfserve_Login@13fd2ccd]" started-at="2024-09-12T00:43:06 IST" name="browserclosure" finished-at="2024-09-12T00:43:06 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closebrowser -->
-        <test-method is-config="true" signature="launchbroswer()[pri:0, instance:com.Iblesoft.TC_001LoginCheck@b9b00e0]" started-at="2024-09-11T19:27:54 IST" name="launchbroswer" finished-at="2024-09-11T19:27:55 IST" duration-ms="812" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchbroswer -->
-        <test-method signature="ValidLoginTest()[pri:0, instance:com.Iblesoft.TC_001LoginCheck@b9b00e0]" started-at="2024-09-11T19:27:55 IST" name="ValidLoginTest" finished-at="2024-09-11T19:28:00 IST" duration-ms="5322" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidLoginTest -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.Iblesoft.TC_001LoginCheck@b9b00e0]" started-at="2024-09-11T19:28:00 IST" name="closebrowser" finished-at="2024-09-11T19:28:00 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closebrowser -->
-      </class> <!-- com.Iblesoft.TC_001LoginCheck -->
+        </test-method> <!-- browserclosure -->
+      </class> <!-- Toggle3d.aritize.com.TC_Internal_Selfserve_Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

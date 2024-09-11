@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Iblesoft.TC_001LoginCheck">
+      <class name="Toggle3d.aritize.com.TC_Internal_Selfserve_Login">
         <methods>
-          <include name="InvalidLoginTest"/>
-          <include name="launchbroswer"/>
-          <include name="closebrowser"/>
+          <include name="Checkhomepage"/>
+          <include name="browserclosure"/>
+          <include name="Launchbroswer"/>
         </methods>
-      </class> <!-- com.Iblesoft.TC_001LoginCheck -->
+      </class> <!-- Toggle3d.aritize.com.TC_Internal_Selfserve_Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
