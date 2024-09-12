@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Toggle3d.aritize.com.TC_Internal_Selfserve_Login">
+      <class name="Toggle3d.aritize.com.TC_Internal_SelfServe_CreateModel_001">
         <methods>
           <include name="Checkhomepage"/>
           <include name="browserclosure"/>
           <include name="Launchbroswer"/>
         </methods>
-      </class> <!-- Toggle3d.aritize.com.TC_Internal_Selfserve_Login -->
+      </class> <!-- Toggle3d.aritize.com.TC_Internal_SelfServe_CreateModel_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
