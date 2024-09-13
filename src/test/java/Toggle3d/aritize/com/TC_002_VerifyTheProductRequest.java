@@ -52,7 +52,7 @@ public class TC_002_VerifyTheProductRequest {
 		WebElement productURL = driver.findElement(By.id("url"));
 		productURL.sendKeys("https://in.puma.com/in/en/pd/tour-mens-sneakers/386918?swatch=01");
 		WebElement sku = driver.findElement(By.id("sku"));
-		sku.sendKeys("puma002");
+		sku.sendKeys("puma070");
 		WebElement productcategory = driver.findElement(By.id("client_category"));
 		productcategory.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

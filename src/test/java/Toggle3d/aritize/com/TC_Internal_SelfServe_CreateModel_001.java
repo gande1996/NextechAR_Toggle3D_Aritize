@@ -1,12 +1,14 @@
 package Toggle3d.aritize.com;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -51,7 +53,25 @@ public class TC_Internal_SelfServe_CreateModel_001 {
 		WebElement categorymodel=driver.findElement(By.className("css-1hwfws3"));
 		categorymodel.click();
 		
-
+		List<WebElement> dropdownoptionscategory = driver.findElements(By.xpath("//*[@id=\"app\"]/div/div/div/div/div/div[2]/div/div/div/div[1]/div/div[1]/div[1]"));
+		for(WebElement category:dropdownoptionscategory) {
+			if(category.getText().equals("Chairs")) {
+				category.click();
+				break;
+			}
+		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		WebElement btncontinue=driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div[2]/div/div/div/div[2]/button[2]"));
+		Assert.assertTrue(btncontinue.isDisplayed());
+		Assert.assertTrue(btncontinue.isEnabled());
+		btncontinue.click();
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+//		WebElement popupbtnYesiamsure=driver.findElement(By.className("MuiTouchRipple-root"));
+//		popupbtnYesiamsure.click();
+				
+		
+				
+		
 	}
 
 	@AfterMethod
