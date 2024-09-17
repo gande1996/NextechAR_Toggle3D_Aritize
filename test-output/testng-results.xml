@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-14T23:50:36 IST" name="Default suite" finished-at="2024-09-14T23:51:03 IST" duration-ms="27294">
+  <suite started-at="2024-09-17T23:25:14 IST" name="Default suite" finished-at="2024-09-17T23:25:35 IST" duration-ms="21609">
     <groups>
     </groups>
-    <test started-at="2024-09-14T23:50:36 IST" name="Default test" finished-at="2024-09-14T23:51:03 IST" duration-ms="27294">
-      <class name="Toggle3d.aritize.com.TC_Internal_SelfServe_CreateModel_001">
-        <test-method is-config="true" signature="Launchbroswer()[pri:0, instance:Toggle3d.aritize.com.TC_Internal_SelfServe_CreateModel_001@13fd2ccd]" started-at="2024-09-14T23:50:36 IST" name="Launchbroswer" finished-at="2024-09-14T23:50:37 IST" duration-ms="1324" status="PASS">
+    <test started-at="2024-09-17T23:25:14 IST" name="Default test" finished-at="2024-09-17T23:25:35 IST" duration-ms="21609">
+      <class name="Toggle3d.aritize.com.testcase1">
+        <test-method is-config="true" signature="launchbroswer()[pri:0, instance:Toggle3d.aritize.com.testcase1@13fd2ccd]" started-at="2024-09-17T23:25:14 IST" name="launchbroswer" finished-at="2024-09-17T23:25:23 IST" duration-ms="9339" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbroswer -->
-        <test-method signature="Checkhomepage()[pri:0, instance:Toggle3d.aritize.com.TC_Internal_SelfServe_CreateModel_001@13fd2ccd]" started-at="2024-09-14T23:50:37 IST" name="Checkhomepage" finished-at="2024-09-14T23:51:03 IST" duration-ms="25948" status="PASS">
+        </test-method> <!-- launchbroswer -->
+        <test-method signature="testcase()[pri:0, instance:Toggle3d.aritize.com.testcase1@13fd2ccd]" started-at="2024-09-17T23:25:23 IST" name="testcase" finished-at="2024-09-17T23:25:35 IST" duration-ms="12243" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Checkhomepage -->
-        <test-method is-config="true" signature="browserclosure()[pri:0, instance:Toggle3d.aritize.com.TC_Internal_SelfServe_CreateModel_001@13fd2ccd]" started-at="2024-09-14T23:51:03 IST" name="browserclosure" finished-at="2024-09-14T23:51:03 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- testcase -->
+        <test-method is-config="true" signature="close()[pri:0, instance:Toggle3d.aritize.com.testcase1@13fd2ccd]" started-at="2024-09-17T23:25:35 IST" name="close" finished-at="2024-09-17T23:25:35 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserclosure -->
-      </class> <!-- Toggle3d.aritize.com.TC_Internal_SelfServe_CreateModel_001 -->
+        </test-method> <!-- close -->
+      </class> <!-- Toggle3d.aritize.com.testcase1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
