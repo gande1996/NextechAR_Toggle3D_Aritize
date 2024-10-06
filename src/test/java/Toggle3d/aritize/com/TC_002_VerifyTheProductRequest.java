@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -51,8 +52,13 @@ public class TC_002_VerifyTheProductRequest {
 		productTitle.sendKeys("pumaShoes");
 		WebElement productURL = driver.findElement(By.id("url"));
 		productURL.sendKeys("https://in.puma.com/in/en/pd/tour-mens-sneakers/386918?swatch=01");
-		WebElement sku = driver.findElement(By.id("sku"));
-		sku.sendKeys("puma070");
+//		WebElement sku = driver.findElement(By.id("sku"));
+//		sku.sendKeys("puma070");
+		
+		String randomsku = generateRandomAlphanumeric(10);
+		System.out.println("Generated SKU:" +randomsku);
+		WebElement entersku = driver.findElement(By.id("sku"));
+		entersku.sendKeys(randomsku);
 		WebElement productcategory = driver.findElement(By.id("client_category"));
 		productcategory.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -75,7 +81,8 @@ public class TC_002_VerifyTheProductRequest {
 		depth.sendKeys("4");
 		WebElement note=driver.findElement(By.id("note"));
 		note.sendKeys("newmodel");
-		driver.findElement(By.xpath("/html/body/div[2]/div[3]/div/div[3]/div/div/div[8]/div/div[1]/div/div/div/button[2]/span[1]")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(By.xpath("/html/body/div[2]/div[3]/div/div[3]/div/div/div[9]/div/div[1]/div/div/div/button[2]/span[1]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.findElement(By.id("url-0")).sendKeys("https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/107341/03/sv01/fnd/IND/fmt/png/Varion-II-Unisex-Indoor-Sports-Shoes");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -86,6 +93,16 @@ public class TC_002_VerifyTheProductRequest {
 		
 	
 	}
+		private String generateRandomAlphanumeric(int Length) {
+		String chars= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		StringBuilder sb=new StringBuilder();
+		Random random=new Random();
+		for(int i =0; i<Length;i++) {
+			int index=random.nextInt(chars.length());
+			sb.append(chars.charAt(index));
+		}
+		return sb.toString();
+		}
 
 	@AfterMethod
 	public void closures() {

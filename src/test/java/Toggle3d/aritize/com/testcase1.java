@@ -53,7 +53,7 @@ public class testcase1 {
 		System.out.println("Actual H3 Title: " + actualtitle);
 		assert actualtitle.equals(expectedtitle) : "Title does not match!";
 		WebElement toolsmenu = driver
-				.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/header/div/div/div[37]/div/span"));
+				.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/header/div/div/div[7]/div/a"));
 		toolsmenu.click();
 		WebElement complexityCheckersubmenu = driver
 				.findElement(By.xpath("/html/body/div[2]/div[3]/ul/a[2]/li/div/span"));

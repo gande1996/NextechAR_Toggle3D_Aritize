@@ -89,11 +89,18 @@ public class TC_Portal_ComplexityChecker_PriceCheck {
 		WebElement pricerange=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[3]/div/div/div/div/table/tbody/tr/td[3]"));
 		Assert.assertTrue(pricerange.isDisplayed());
 		System.out.println("Enter the Price Range:"+pricerange.getText());
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WebElement newsearch=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[3]/div/div/div/form/div/button/span[1]"));
+		Assert.assertTrue(newsearch.isDisplayed());
+		Assert.assertTrue(newsearch.isEnabled());
+		newsearch.click();
+		
 		
 	}
 
 	@AfterMethod
 	public void close() {
-//		driver.close();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.close();
 	}
 }
