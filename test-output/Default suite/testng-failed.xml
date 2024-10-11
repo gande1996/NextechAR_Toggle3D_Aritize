@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.createNewProductRequest">
+      <class name="tests.verifyTheValidLoginPage">
         <methods>
-          <include name="Verify_Create_new_product_Request"/>
+          <include name="Verify_With_Valid_Login_Details"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tests.createNewProductRequest -->
+      </class> <!-- tests.verifyTheValidLoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
