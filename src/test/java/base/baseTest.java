@@ -1,5 +1,7 @@
 package base;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,10 +20,12 @@ public class baseTest {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("https://portal-test.threedy.ai/");
+
 	}
 	
 	@AfterMethod
 	public void tearDown() {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 		if(driver !=null) {
 			driver.quit();
 		}
