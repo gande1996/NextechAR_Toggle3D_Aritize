@@ -57,7 +57,7 @@ public class createNewProductRequest extends baseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		productPage.clickOnUrlProduct();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		productPage.enterProductUrl("https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/193753/02/sv01/fnd/IND/fmt/png/UltraRide-ProFoam-Men's-Running-Shoes");
+		productPage.enterProductUrl("https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/308419/01/sv01/fnd/IND/fmt/png/Porsche-Legacy-Caven-2.0-Turbo-Unisex-Motorsport-Sneakers");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		productPage.clickSendRequestButton();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(35));
